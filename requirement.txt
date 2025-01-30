@@ -1,0 +1,1 @@
+pandas numpy openpyxl networkx scipy folium scikit-learn flask
