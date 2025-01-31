@@ -1,0 +1,57 @@
+/* Styling for the Optimized Routes Component */
+.optimized-routes-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+h1, h2 {
+  color: #333;
+}
+
+.input-form {
+  margin-bottom: 20px;
+}
+
+.input-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.input-form input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.input-form input[type="time"] {
+  width: 50%;
+}
+
+.trip-details-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.trip-details-table th, .trip-details-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.trip-details-table th {
+  background-color: #f2f2f2;
+}
+
+.map-container {
+  margin-top: 20px;
+}
+
+.map-container iframe {
+  border: none;
+  width: 100%;
+  height: 600px;
+}
