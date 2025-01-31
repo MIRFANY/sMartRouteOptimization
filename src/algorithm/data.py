@@ -68,18 +68,26 @@ def read_Store_Location():
     except Exception as e:
         print(f"❌ Error reading {INPUT_FILE}: {e}")
         return None
-
-def Output_data():
+def write_output_data(data):
+    """Write the trips DataFrame to the output Excel file."""
+    try:
+        with pd.ExcelWriter(OUT_FILE, engine='xlsxwriter') as writer:
+            data.to_excel(writer, sheet_name='Sample Output Trip', index=False)
+            print(f"✅ Output data written to {OUT_FILE}")
+    except Exception as e:
+        print(f"❌ Error writing output data: {e}")
+        
+def Read_Output_data():
     sheet_name='Sample Output Trip'
     """Read output data from the specified sheet."""
     try:
-        xls = pd.ExcelFile(INPUT_FILE)
+        xls = pd.ExcelFile(OUT_FILE)
         Output_data = xls.parse(sheet_name)
-        print(f"✅ Loaded {sheet_name} from {INPUT_FILE}")
+        print(f"✅ Loaded {sheet_name} from {OUT_FILE}")
         print(Output_data.head()) 
         return Output_data
     except Exception as e:
-        print(f"❌ Error reading {INPUT_FILE}: {e}")
+        print(f"❌ Error reading {OUT_FILE}: {e}")
         return None
 
 def main():
