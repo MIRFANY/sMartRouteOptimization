@@ -5,3 +5,7 @@ venv
 src/.DS_Store
 src/__pycache__
 src/venv
+.vscode/
+node_modules/
+package.json
+ package-lock.json
