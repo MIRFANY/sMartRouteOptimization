@@ -78,10 +78,19 @@ const OptimizedRoutes = () => {
       setError(err.message);
     }
   };
+
+  // Function to calculate the number of shipments
+  const getNumberOfShipments = (shipments) => {
+    if (shipments) {
+      return Array.isArray(shipments) ? shipments.length : shipments.split(',').length;
+    }
+    return 0;
+  };
+
   return (
     <div className="optimized-routes-container">
       <h1>Optimized Routes</h1>
-         {/* Prediction Section */}
+      {/* Prediction Section */}
       <div className="prediction-section">
         <h2>New Shipment Prediction</h2>
         <div className="input-group">
@@ -145,6 +154,7 @@ const OptimizedRoutes = () => {
           <tr>
             <th>Trip ID</th>
             <th>Shipment IDs</th>
+            <th>Number of Shipments</th> {/* New Column */}
             <th>TIME SLOT</th>
             <th>TRIP_TIME</th>
             <th>FROM(STORE)</th>
@@ -158,9 +168,10 @@ const OptimizedRoutes = () => {
         </thead>
         <tbody>
           {filteredTrips.map((trip) => (
-            <tr key={trip['TRIP ID']}>
+            <tr key={trip['TRIP_ID']}>
               <td>{trip['TRIP_ID']}</td>
               <td>{trip['Shipments']}</td>
+              <td>{getNumberOfShipments(trip['Shipments'])}</td> {/* Display the number of shipments */}
               <td>{trip['TIME_SLOT']}</td>
               <td>{trip['TRIP_TIME']}</td>
               <td>{'19.075887,72.877911'}</td>
