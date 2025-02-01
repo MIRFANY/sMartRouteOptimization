@@ -21,7 +21,6 @@ Traditional delivery planning processes are often manual, time-consuming, and pr
 ## Features
 
 - **🚀 AI/ML-Based Trip Optimization:** The system uses clustering algorithms (e.g., K-Means) to group shipments into trips and assigns the most suitable vehicle type based on capacity and distance constraints.
-- **🛣️ Real-Time Traffic Aware Routing (Optional):** The system can integrate with real-time traffic data or use Minimum Spanning Tree (MST) for approximate distance calculations.
 - **🗺️ Interactive Map Visualization:** The optimized routes are displayed on an interactive map using the `folium` library, allowing users to visualize the delivery routes and shipment locations.
 - **🚚 Automated Vehicle Allocation:** The system prioritizes the use of specific vehicle types (e.g., 3W, 4W-EV) before assigning regular vehicles, ensuring efficient resource utilization.
 - **✅ Trip Validation:** Each trip is validated against constraints such as capacity utilization, time slot utilization, and distance coverage.
@@ -87,8 +86,7 @@ The output is a tabular representation of each trip, with the following paramete
 
 ## 🔥 Optional Features
 
-- **📡 Real-Time Traffic Integration:** Integrate with a traffic API for real-time traffic-aware routing.
-- **📈 Metrics for Trip Quality:** Devise additional metrics to judge the quality of created trips.
+- **🚛 Filter Trips by Vehicle Type:** Users can filter and sort trips based on the assigned vehicle type.
 
 ## 📜 Documentation
 
