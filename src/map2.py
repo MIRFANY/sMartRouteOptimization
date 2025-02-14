@@ -4,6 +4,7 @@ import requests
 
 # Colors for polyline
 colors = ['red', 'blue', 'pink']
+# color of polyline
 
 # Set location of the store
 store_latitude = 19.075887
